@@ -1,0 +1,14 @@
+
+
+#main-container {
+    flex-grow: 1;
+    background-color: #f8f9fa; 
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 40px; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    
+}
