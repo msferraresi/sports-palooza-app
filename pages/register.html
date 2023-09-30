@@ -1,3 +1,43 @@
-<main>
-    <h1>Registro</h1>
+<main class="mainRegistro">
+    <section class="tituloRegistro">
+        <h1>REGISTRATE</h1>
+    </section> 
+    <section class="sectionRegistro">
+        <form class="formRegistro" action="#" method="GET">
+            <label for="nombre">Nombre: </label>
+            <input id="nombre" type="text" placeholder="Nombre*" data-value-missing="Campo requerido"
+                maxlength="10">
+            <label for="apellido">Apellido: </label>
+            <input required id="apellido" type="text" placeholder="Apellido*" data-value-mssing="Campo requerido"
+                maxlength="20" name="apellido">
+            <label for="email">Email: </label>
+            <input required id="email" type="email" placeholder="Email*" data-value-mssing="Campo requerido"
+                maxlength="50" name="email">
+            <label for="contra">Contraseña: </label>
+            <input required id="contra" type="password" placeholder="Contraseña*" data-value-mssing="Campo requerido"
+                pattern="[A-Za-z0-9.@*%$-] {6,10}"
+                data-pattern-mismatch="Longitud entre 6 y 10 caracteres, el mismo debe contener una letra mayuscura o miniscula, un digito, o los simbolos @.*$%"
+                maxlength="10" name="contrasena">
+            <label for="celular">Celular: </label>
+            <input id="celular" type="number" placeholder="Celular" maxlength="10" name="celular">
+            <label for="nacionalidad">Nacionalidad: </label>
+            <select required name="nacionalidad" id="nacionalidad">
+                <option value="1" selected>Argentina</option>
+                <option value="2">Bolivia</option>
+                <option value="3">Brasil</option>
+                <option value="4">Chile</option>
+                <option value="5">Colombia</option>
+                <option value="6">Ecuador</option>
+                <option value="7">Paraguay</option>
+                <option value="8">Perú</option>
+                <option value="9">Uruguay</option>
+                <option value="10">Venezuela</option>
+            </select>
+            <label for="fechaDeNacimiento">Fecha de nacimiento: </label>
+            <input type="date" id="fechaDeNacimiento" name="fechaDeNacimiento" max="2005-12-31">
+            <label for="acepto">Soy mayor de 18 años y aceptos las bases y condiciones</label>
+            <input class="inputCheckbox" required id="acepto" type="checkbox" name="acepto" data-value-mssing="Campo requerido">
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
 </main>
