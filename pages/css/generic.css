@@ -3,13 +3,16 @@ body{
     flex-direction: column;
     min-height: 100vh; /* Esto garantiza que el cuerpo ocupe al menos toda la altura de la ventana. */
     margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: url('/assets/images/backgroud.jpeg'); 
     background-size:cover;
     background-repeat: no-repeat; 
 }
 
 .divContainer{
-    background-color: greenyellow;
+    color: #0BDFE0;
 }
 
+.h1 {
+    color: #0BDFE0;
+
+}
