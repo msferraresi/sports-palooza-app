@@ -1,0 +1,3 @@
+function SendQuestion(){
+    alert("mensaje");
+}
