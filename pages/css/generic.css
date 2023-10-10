@@ -2,10 +2,11 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Esto garantiza que el cuerpo ocupe al menos toda la altura de la ventana. */
-    margin: 0;
+    margin: 15px;
     background-image: url('/assets/images/backgroud.jpeg'); 
     background-size:cover;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
+    font-family: 'Autour One', cursive; 
 }
 
 .divContainer{
@@ -14,5 +15,13 @@ body{
 
 .h1 {
     color: #0BDFE0;
+    font-family: 'Pixelify Sans', cursive;
+    font-size: 50px;
 
+}
+
+footer{
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    left: -1px;
 }
