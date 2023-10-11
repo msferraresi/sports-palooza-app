@@ -40,3 +40,32 @@ header h1 a {
     text-decoration: none;
     color: #fff;
 }
+
+.horizontal-block {
+    display: flex; 
+    align-items: center; 
+}
+
+.horizontal-block img {
+    margin-right: 10px; 
+}
+
+.horizontal-block h1 {
+    font-size: 24px; 
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 550px) {
+    #logo{
+        display: none; /* Oculta el bloque horizontal en dispositivos móviles */
+    }
+
+    .mobile-menu-toggle {
+        display: block; /* Muestra el icono de hamburguesa */
+    }
+
+    nav ul.nav-list {
+        display: none; /* Oculta la lista de menú en dispositivos móviles */
+        flex-direction: column; /* Muestra las opciones de menú en una columna */
+    }
+}
