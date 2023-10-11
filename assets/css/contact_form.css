@@ -9,7 +9,6 @@
     margin-left: 15%;
     margin-right: 15%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url("../images/fond9.jpg") ;
     border-radius: 5%;
     padding-left: 2%;
     padding-right: 2%;
@@ -18,7 +17,6 @@
 }
 form {
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
 }
 label, input, textarea {
