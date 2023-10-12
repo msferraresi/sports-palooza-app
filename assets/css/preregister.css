@@ -5,8 +5,7 @@
     align-items: center;
     background-image: url("../images/fond9.jpg");
     height: 800px;
-}
-
+    
 .sectionpr{
     display: flex;
     flex-direction: column;
