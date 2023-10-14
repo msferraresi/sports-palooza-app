@@ -13,15 +13,15 @@
             <br>
 
             <label for="txtPass">Contraseña: </label>
-            <input required id="txtPassword" type="password" placeholder="Contraseña*" data-value-mssing="Campo requerido" maxlength="50" name="txtPass">
+            <input required id="txtPass" type="password" placeholder="Contraseña*" data-value-mssing="Campo requerido" maxlength="50" name="txtPass">
             <div id="pass-error" class="error-message"></div> 
             <br>
             <div class="button-container">
-                <button  class="buttonpr "  id="btnLogin" onclick="SendLogin()">Login</button>
+                <button  class="buttonpr "  id="btnLogin" onclick="login()">Login</button>
                 <button  class="buttonpr "  id="btnCrear" onclick="cargarPagina('register')">Crear cuenta</button>
             </div>
         </form>
         <br>
-        <div id="form-response" class="success-message"></div>
+        <div id="form-response" class="error-message-new"></div>
     </div>
 </main>
