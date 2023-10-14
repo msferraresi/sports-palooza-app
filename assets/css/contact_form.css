@@ -36,3 +36,30 @@ button {
     cursor: pointer;
 }
 
+
+.error-message {
+    color: #FF0000;
+    font-size: 14px; 
+    margin-top: 5px; 
+}
+
+.error-message::before {
+    font-weight: bold; 
+}
+
+#form-response {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+}
+
+.success-message {
+    color: #008000;
+    font-size: 24px; 
+    margin-top: 5px;
+}
+
+.success-message::before {
+    font-weight: bold;
+}
