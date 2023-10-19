@@ -6,7 +6,6 @@ function login() {
 
     if (validarEmailLogin(correo) && validarPassLogin(pass)) {
         validarIdentidad(correo, pass)
-        cargarPagina('paginaprincipal')
         /*if(validarIdentidad(correo, pass)){
             document.getElementById("txtMail").value = '';
             document.getElementById("txtPass").value = '';
@@ -47,7 +46,7 @@ function validarPassLogin(pass) {
 
 function validarIdentidad(correo, pass) {
     var datosaValidar = []
-    var emailUsuario = null
+    var nombreUsuario = null
     var passUsuario = null
     var datosaValidar = JSON.parse(json)
     for (let i = 0; i < datosaValidar.length; i++) {
@@ -64,8 +63,8 @@ function validarIdentidad(correo, pass) {
     if (nombreUsuario != null && passUsuario != null) {
         localStorage.setItem("nombreSesion", nombreUsuario)
         localStorage.setItem("passSesion", passUsuario)
+        cargarPagina('paginaprincipal')
     }
-
     //return Math.random() < 0.5; 
 }
 
