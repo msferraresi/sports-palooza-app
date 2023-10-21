@@ -1,11 +1,12 @@
-function login(){
+function login() {
     event.preventDefault();
     document.getElementById('form-response').textContent = '';
     let correo = document.getElementById("txtMail").value;
     let pass = document.getElementById("txtPass").value;
 
-    if(validarEmailLogin(correo) && validarPassLogin(pass)){
-        if(validarIdentidad(correo, pass)){
+    if (validarEmailLogin(correo) && validarPassLogin(pass)) {
+        validarIdentidad(correo, pass)
+        /*if(validarIdentidad(correo, pass)){
             document.getElementById("txtMail").value = '';
             document.getElementById("txtPass").value = '';
             document.getElementById('mail-error').textContent = '';
@@ -13,7 +14,7 @@ function login(){
         }else{
             document.getElementById('form-response').textContent = 'No se pudo validar la identidad';
             event.preventDefault();
-        }
+        }*/
     }
 }
 
@@ -43,6 +44,34 @@ function validarPassLogin(pass) {
     }
 }
 
-function validarIdentidad(correo, pass){
-    return Math.random() < 0.5; 
+function validarIdentidad(correo, pass) {
+    var datosaValidar = []
+    var nombreUsuario = null
+    var passUsuario = null
+    var datosaValidar = JSON.parse(json)
+    for (let i = 0; i < datosaValidar.length; i++) {
+        if (correo == datosaValidar[i]) {
+            let posicionUsuario = i;
+            nombreUsuario = datosaValidar[i-2]
+            if (pass == datosaValidar[posicionUsuario + 1]) {
+                console.log("Sesion iniciada")
+                passUsuario = datosaValidar[posicionUsuario + 1]
+                break;
+            }
+        }
+    }
+    if (nombreUsuario != null && passUsuario != null) {
+        localStorage.setItem("nombreSesion", nombreUsuario)
+        localStorage.setItem("passSesion", passUsuario)
+        cargarPagina('paginaprincipal')
+    }
+    //return Math.random() < 0.5; 
 }
+
+function sesionIniciada() {
+    if(nombreUsuario != null && passUsuario != null){
+        cargarPagina('paginaprincipal')
+    }
+}
+
+sesionIniciada()

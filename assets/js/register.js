@@ -1,6 +1,7 @@
 console.log("conectado registro js")
-//localStorage.clear();
-var json = localStorage.getItem('array')
+var nombreUsuario = localStorage.getItem("nombreSesion")
+var passUsuario = localStorage.getItem("passSesion")
+var json = localStorage.getItem("array")
 var datosUsuario = []
 if (json != null) { 
     datosUsuario = JSON.parse(json);
@@ -17,3 +18,8 @@ function guardarDatos(){
     localStorage.setItem("array", JSON.stringify(datosUsuario));
 }
 console.log(datosUsuario)
+console.log(json)
+console.log(nombreUsuario)
+console.log(passUsuario)
+//localStorage.removeItem("nombreSesion");
+//localStorage.clear();
