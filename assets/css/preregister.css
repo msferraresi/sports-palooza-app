@@ -5,7 +5,8 @@
     align-items: center;
     background-image: url("../images/fond9.jpg");
     height: 800px;
-    
+}
+
 .sectionpr{
     display: flex;
     flex-direction: column;
@@ -20,11 +21,13 @@
 .buttonpr {
     background-color: hsl(123, 15%, 27%);
     color: #fff;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 20px; 
     cursor: pointer;
     border: 3px solid #909090;
 }
-.p{ 
+
+.p { 
     color: rgb(240, 243, 240);
-    text-shadow: 4px 4px 5px rgb(109, 112, 109) ;}
+    text-shadow: 4px 4px 5px rgb(109, 112, 109) ;
+}

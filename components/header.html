@@ -1,23 +1,22 @@
-<!--<header>
-    <h1 class="animate__animated animate__bounce">SportsPalooza</h1>
-    <nav>
-        <ul class="nav-list">
-            <li><a href="#" id="menu-home">Inicio</a></li>
-            <li><a href="#" id="menu-about">Acerca de</a></li>
-            <li><a href="#" id="menu-service">Servicios</a></li>
-            <li><a href="#" id="menu-contact">Contacto</a></li>
-            <li><a href="#" id="menu-contact">Inicio Sesion</a></li>
-        </ul>
-    </nav>
-</header>-->
-
 <header>
-    <h1 class="animate__animated animate__bounce"><a href="#" onclick="cargarPagina('home')">SportsPalooza</a></h1>
+    <div class="animate__animated animate__bounce">
+        <div class="horizontal-block">
+            <img id="logo" alt="SportsPalooza" src="/assets/images/pelota-r.png" align="center" width="45" height="45">
+            <h1>
+                <a href="#" onclick="cargarPagina('home')">SportsPalooza</a>
+            </h1>
+        </div>
+    </div>
+
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <div class="hamburger">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </div>
+
     <nav>
         <ul class="nav-list">
             <li><a href="#" onclick="cargarPagina('home')">Inicio</a></li>
-            <li><a href="#" onclick="cargarPagina('about')">Acerca de</a></li>
-            <li><a href="#" onclick="cargarPagina('services')">Servicios</a></li>
             <li><a href="#" onclick="cargarPagina('contact')">Contacto</a></li>
             <li><a href="#" onclick="cargarPagina('login')">Inicio Sesion</a></li>
         </ul>
