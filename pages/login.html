@@ -1,0 +1,27 @@
+<main class="mainContacto">
+    <div class="animate__animated animate__heartBeat">
+        <div class="horizontal-block-home">
+            <img id="logo" alt="SportsPalooza" src="/assets/images/basketball.png" align="center" width="70" height="50">
+            <h2>Inicio de sesion</h2>
+        </div>
+    </div>
+    <div class="container">
+        <form id="contact-form">
+            <label for="txtMail">Email: </label>
+            <input required id="txtMail" type="text" placeholder="Email*" data-value-mssing="Campo requerido" maxlength="50" name="txtMail">
+            <div id="mail-error" class="error-message"></div> 
+            <br>
+
+            <label for="txtPass">Contraseña: </label>
+            <input required id="txtPass" type="password" placeholder="Contraseña*" data-value-mssing="Campo requerido" maxlength="50" name="txtPass">
+            <div id="pass-error" class="error-message"></div> 
+            <br>
+            <div class="button-container">
+                <button  class="buttonpr "  id="btnLogin" onclick="login()">Login</button>
+                <button  class="buttonpr "  id="btnCrear" onclick="cargarPagina('register')">Crear cuenta</button>
+            </div>
+        </form>
+        <br>
+        <div id="form-response" class="error-message-new"></div>
+    </div>
+</main>

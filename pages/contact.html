@@ -1,0 +1,28 @@
+<main class="mainContacto">
+    <div class="animate__animated animate__heartBeat">
+        <div class="horizontal-block-home">
+            <img id="logo" alt="SportsPalooza" src="/assets/images/tenis.png" align="center" width="70" height="50">
+            <h2>Contacto</h2>
+        </div>
+    </div>
+   <div class="container">
+       <form id="contact-form">
+           <label for="txtName">Nombre: </label>
+           <input required id="txtName" type="text" placeholder="Nombre*" data-value-missing="Campo requerido" maxlength="50" name="txtName">
+           <div id="name-error" class="error-message"></div> 
+            <br>
+           <label for="txtMail">Email: </label>
+           <input required id="txtMail" type="text" placeholder="Email*" data-value-mssing="Campo requerido" maxlength="50" name="txtMail">
+           <div id="mail-error" class="error-message"></div> 
+           <br>
+           <label for="txtMessage">Mensaje:</label>
+           <textarea required id="txtMessage" name="txtMessage" rows="4" placeholder="Escribe tu mensaje aquí*" data-value-missing="El mensaje es requerido"></textarea>
+           <div id="message-error" class="error-message"></div> 
+           <br>
+           <button  class="buttonpr"  id="registro1" onclick="SendQuestion()">Enviar</button>
+       </form>
+       <br>
+       <div id="form-response" class="success-message"></div>
+   </div>
+   </div>
+</main>

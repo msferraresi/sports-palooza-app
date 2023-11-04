@@ -1,0 +1,14 @@
+.horizontal-block-home {
+    display: flex; 
+    align-items: center; 
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal-block-home img {
+    margin-right: 10px; 
+}
+
+.horizontal-block-home h1 {
+    font-size: 40px; 
+}

@@ -1,0 +1,81 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.horizontal-block {
+    display: flex; 
+    align-items: center; 
+}
+
+.horizontal-block img {
+    margin-right: 10px; 
+}
+
+.horizontal-block h1 {
+    font-size: 24px; 
+}
+
+@media screen and (min-width: 551px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    nav ul.nav-list {
+        display: flex; /* Oculta la lista de menú en dispositivos móviles */
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #logo{
+        display: none; /* Oculta el bloque horizontal en dispositivos móviles */
+    }
+
+    .mobile-menu-toggle {
+        display: block; /* Muestra el icono de hamburguesa */
+    }
+
+    nav ul.nav-list {
+        display: none; /* Oculta la lista de menú en dispositivos móviles */
+        flex-direction: column; /* Muestra las opciones de menú en una columna */
+    }
+}

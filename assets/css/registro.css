@@ -1,0 +1,138 @@
+.tituloRegistro{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(240, 243, 240);
+    text-shadow: 4px 4px 5px rgb(109, 112, 109) ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.formRegistro{
+    display:flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(#4c7527, #0000);
+    background: rgba(0,0,0,0.5);
+    border: 3px solid #909090;
+    border-radius: 2rem;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: rgb(240, 243, 240)
+}
+
+.mainRegistro{
+    display:flex;
+    flex-direction: column;
+    height: 800px;
+    background-image: url("../images/fond9.jpg");
+    
+}
+
+label{
+   margin-bottom: 5px; 
+   color: aliceblue;
+}
+input{
+    margin-bottom: 5px;
+    background-color: hsl(123, 15%, 27%);
+    color: #fff;
+    padding: 10px;
+    border: 3px solid #909090;
+    border-radius: 20px;
+    cursor: pointer;
+}
+select{
+    margin-bottom: 5px;
+    background-color: hsl(123, 15%, 27%);
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px; 
+    cursor: pointer;
+}
+
+textarea{
+    margin-bottom: 5px;
+    background-color: hsl(123, 15%, 27%);
+    color: #fff;
+    padding: 10px;
+    border: 3px solid #909090;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.inputCheckbox{
+    margin-left: -96%;
+}
+
+/* Estilos por defecto para pantallas más grandes (mayores de 550px) */
+form label {
+    display: inline; /* Muestra los labels */
+}
+
+form input::placeholder {
+    color: hsl(123, 15%, 27%); /* Establece un color de marcador de posición gris para los inputs */
+}
+
+form textarea::placeholder {
+    color: hsl(123, 15%, 27%); /* Establece un color de marcador de posición gris para los inputs */
+}
+
+/* Estilos para dispositivos móviles (menores o iguales a 550px) */
+@media screen and (max-width: 550px) {
+    form label {
+        display: none; /* Oculta los labels */
+    }
+
+    form input::placeholder {
+        color: #fff; /* Restablece el color de marcador de posición predeterminado para los inputs */
+    }
+
+    form textarea::placeholder {
+        color: #fff; /* Restablece el color de marcador de posición predeterminado para los inputs */
+    }
+}
+
+
+
+
+.form-row {
+    display: flex; /* Hace que los elementos hijos estén en línea (en la misma fila) */
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    margin-bottom: 10px; /* Agrega un espacio entre las filas */
+}
+
+.form-row label {
+    flex-basis: 20%; /* Establece el ancho del label, ajusta según tus necesidades */
+}
+
+.form-row select,
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="password"],
+.form-row input[type="date"] {
+    flex: 1; /* Hace que los elementos de entrada se expandan y ocupen el espacio restante */
+}
+
+/* Estilos adicionales para los inputs y select (ajusta según tu diseño) */
+.form-row select,
+.form-row input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    background-color: hsl(123, 15%, 27%);
+    color: #fff;
+    padding: 10px;
+    border: 3px solid #909090;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Estilos para los checkbox (ajusta según tu diseño) */
+.form-row input[type="checkbox"] {
+    margin-right: 5px;
+}
