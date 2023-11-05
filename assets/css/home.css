@@ -1,19 +1,31 @@
 .horizontal-block-home {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     display: flex;
     justify-content: center;
 }
 
 .horizontal-block-home img {
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .horizontal-block-home h1 {
-    font-size: 40px; 
+    font-size: 40px;
 }
+
 .iframe {
     display: flex;
     padding: 10px;
     justify-content: center;
+}
+
+
+.h1 {
+    color: yellow;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 3px 3px 2px #739072;
+}
+h2 {
+    color: yellow;
+    text-shadow: 2px 2px 1px #739072;
 }
