@@ -10,7 +10,11 @@ header {
 
 header h1 {
     margin: 0;
+    color: yellow;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 3px 3px 2px #739072;
 }
+
 
 nav {
     display: flex;
