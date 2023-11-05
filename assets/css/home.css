@@ -12,3 +12,8 @@
 .horizontal-block-home h1 {
     font-size: 40px; 
 }
+.iframe {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}

@@ -14,7 +14,12 @@ footer {
     padding: 5px 0;
     text-align: center;
 }
-.iconos {
-   
-
+.icons {
+    display: flex;
+    column-gap: 12px;  
+    justify-content: center; 
+}
+.icons a {
+    color: #39A7FF;
+    font-size: 20px;
 }
