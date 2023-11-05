@@ -10,10 +10,10 @@ header {
 
 header h1 {
     margin: 0;
-    color: yellow;
     font-family: 'Orbitron', sans-serif;
     text-shadow: 3px 3px 2px #739072;
 }
+
 
 
 nav {
@@ -42,20 +42,20 @@ nav {
 
 header h1 a {
     text-decoration: none;
-    color: #fff;
+    color: yellow;
 }
 
 .horizontal-block {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
 .horizontal-block img {
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .horizontal-block h1 {
-    font-size: 24px; 
+    font-size: 24px;
 }
 
 @media screen and (min-width: 551px) {
@@ -64,22 +64,27 @@ header h1 a {
     }
 
     nav ul.nav-list {
-        display: flex; /* Oculta la lista de menú en dispositivos móviles */
+        display: flex;
+        /* Oculta la lista de menú en dispositivos móviles */
         flex-direction: row;
     }
 }
 
 @media screen and (max-width: 550px) {
-    #logo{
-        display: none; /* Oculta el bloque horizontal en dispositivos móviles */
+    #logo {
+        display: none;
+        /* Oculta el bloque horizontal en dispositivos móviles */
     }
 
     .mobile-menu-toggle {
-        display: block; /* Muestra el icono de hamburguesa */
+        display: block;
+        /* Muestra el icono de hamburguesa */
     }
 
     nav ul.nav-list {
-        display: none; /* Oculta la lista de menú en dispositivos móviles */
-        flex-direction: column; /* Muestra las opciones de menú en una columna */
+        display: none;
+        /* Oculta la lista de menú en dispositivos móviles */
+        flex-direction: column;
+        /* Muestra las opciones de menú en una columna */
     }
 }

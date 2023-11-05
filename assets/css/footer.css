@@ -8,6 +8,8 @@ footer {
     background-color: #333;
     color: #fff;
     border-top: 1px solid gray;
+    font-family: 'Orbitron', sans-serif;
+    font-size: small    ;
 }
 
 .copy-right-class {
