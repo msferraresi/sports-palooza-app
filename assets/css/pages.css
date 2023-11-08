@@ -13,3 +13,12 @@
     background-image: url("../images/fond9.jpg") ;
     color: aliceblue;
 }
+.parrafo1{
+    font-family: 'Iceberg', sans-serif;
+    font-size: large;
+}
+.h1 {
+    color: yellow;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 3px 3px 2px #739072;
+}
