@@ -1,47 +1,44 @@
 
-function cerrarSesion() {
-  localStorage.removeItem("nombreSesion");
-  localStorage.removeItem("passSesion");
-  cargarPagina('home');
-}
-
-
-function obtenerListaDeLigas() {
-  const apiUrl = 'https://www.thesportsdb.com/api/v1/json/3/all_leagues.php';
-
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      const listaLigas = document.getElementById('listaLigas');
-      let ligaArgentinaLink;
-
-      data.leagues.forEach(league => {
-        const listItem = document.createElement('li');
-        listItem.textContent = league.strLeague;
-        listaLigas.appendChild(listItem);
-
-        
-        if (league.strLeague === 'Argentina Primera Division') {
-          ligaArgentinaLink = league.strWebsite;
-        }
-      });
-
-     
-      if (ligaArgentinaLink) {
-        const linkItem = document.createElement('li');
-        const link = document.createElement('a');
-        link.href = ligaArgentinaLink;
-        link.textContent = 'Enlace a la liga argentina de fútbol';
-        linkItem.appendChild(link);
-        listaLigas.appendChild(linkItem);
-      }
-    })
-    .catch(error => {
-      console.error('Error al obtener la lista de ligas', error);
-    });
-}
-
-
 document.addEventListener('DOMContentLoaded', function () {
-  obtenerListaDeLigas();
+  const apiKey = '3b74ae80bbmsh9a1a268dad8d097p100222jsnd0e0d5aec999';
+  const locationKey = 'Santa Isabel, Córdoba';
+
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': apiKey,
+      'X-RapidAPI-Host': 'accuweatherstefan-skliarovv1.p.rapidapi.com'
+    }
+  };
+
+  // URL de la API para obtener condiciones climáticas por ubicación.
+  const apiUrl = `https://accuweatherstefan-skliarovv1.p.rapidapi.com/get24HoursConditionsByLocationKey?locationKey=${locationKey}`;
+
+  const weatherInfo = document.getElementById('weather-info');
+
+  async function obtenerCondicionesClimaticas() {
+    try {
+      const response = await fetch(apiUrl, options);
+      const data = await response.json();
+
+      // Manipula los datos y muestra la información en la página.
+      if (data && data.length > 0) {
+        const ul = document.createElement('ul');
+        data.forEach(entry => {
+          const li = document.createElement('li');
+          li.textContent = `Hora: ${entry.DateTime}, Temperatura: ${entry.Temperature.Imperial.Value} °F`;
+          ul.appendChild(li);
+        });
+        weatherInfo.appendChild(ul);
+      } else {
+        weatherInfo.textContent = 'No se encontraron datos climáticos.';
+      }
+    } catch (error) {
+      console.error(error);
+      weatherInfo.textContent = 'Error al cargar los datos climáticos.';
+    }
+  }
+
+  // Llama a la función para obtener condiciones climáticas cuando la página se carga.
+  obtenerCondicionesClimaticas();
 });
